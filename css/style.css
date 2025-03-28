@@ -7,7 +7,7 @@
         padding: 20px;
     }
     img {
-        width: 200px;
+        width: 120px;
     }
     iframe {
         width: 320px;
@@ -98,6 +98,7 @@ div {
 
 .blue {
     background-color: rgb(238, 238, 255);
+    text-align: center;
 }
 
 .logo {
@@ -121,4 +122,9 @@ div {
     position: absolute;
     margin-left: -49%;
     margin-top: -42px;
+}
+
+#qr-code {
+    width: 300px;
+    height: auto;
 }
