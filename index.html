@@ -1,65 +1,156 @@
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <header>
-            <h1 class="padding">Aromas da Terra</h1>
-            <img id="logo" src="Imagens/logo.png">
-        </header>
-        <div id="content-wrapper">
-            <div>
-                <h1 class="center">Ementa</h1>
-            </div>
-            <div class="blue">
-                <h2 class="center">Entradas</h2>
-                <div class="prato">
-                    <h3 class="pratos">Pão de Alho com Molho de Ervas<br><span class="bold">3.00€</span></h3>
-                    <img src="Imagens/Entradas/pao-de-alho-no-forno--449988p695605.jpg">
-                </div>
-                <br><br>
-                <div class="prato">
-                    <img src="Imagens/Entradas/images.jpg">
-                    <h3 class="pratos">Pão Artesanal com Tomate, Manjericão e Azeite<br><span class="bold">3.00€</span></h3>
-                </div>
-            </div>
-            <div>
-                <h2 class="center">Pratos Principais</h2>
-                <div class="prato">
-                    <h3 class="pratos">Costela de Cordeiro Assada com Molho de Ervas e Batatas Rústicas<br><span class="bold">10.00€</span></h3>
-                    <img src="Imagens/Prato Principal/Costela-de-cordeiro-1.jpg">
-                </div>
-                <br><br>
-                <div class="prato">
-                    <img src="Imagens/Prato Principal/p1344232.jpg">
-                    <h3 class="pratos">Caldeirada de Peixe<br><span class="bold">10.00€</span></h3>
-                </div>
-            </div>
-            <div class="blue">
-                <h2 class="center">Sobremesas</h2>
-                <div class="prato">
-                    <h3 class="pratos">Mousse de Chocolate<br><span class="bold">4.00€</span></h3>
-                    <img src="Imagens/Sobremesas/images.jpg">
-                </div>
-                <br><br>
-                <div class="prato">
-                    <img src="Imagens/Sobremesas/images (1).jpg">
-                    <h3 class="pratos">Tarte de Amêndoa<br><span class="bold">4.00€</span></h3>
-                </div>
-            </div>
-            <br><br>
-            <div class="video">
-                <iframe src="https://www.youtube.com/embed/P6W8kwmwcno?si=Vh_4pGr9N-F-xgEB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="blue">
-                <img id="qr-code" src="Imagens/qr-code.png">
-            </div>
-        </div>
-        <footer>
-            <a href="https://www.instagram.com"><img class="logo" src="Imagens/instagram.webp"></a>
-            <a href="https://www.facebook.com"><img class="logo" src="Imagens/facebook.png"></a>
-            <a href="https://www.gmail.com"><img class="logo" src="Imagens/gmail.png"></a>
-        </footer>
-    </body>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoRoot</title>
+  <link rel="icon" href="img/ecoroot.png" type="image/png" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #4CAF50;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    header .logo-center {
+      display: block;
+      margin: 0 auto;
+      width: 160px;
+      max-width: 30vw;
+      height: auto;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+    nav {
+      background-color: #388e3c;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    .produto-img {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto 20px;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      aspect-ratio: 2 / 1;
+      clip-path: inset(20% 27% 5% 20%);
+    }
+
+    @media (max-width: 600px) {
+      header .logo-center {
+        width: 120px;
+        max-width: 40vw;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      nav {
+        gap: 10px;
+        padding: 8px;
+      }
+
+      .produto-img {
+        aspect-ratio: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="img/ecoroot.png" alt="Logótipo da EcoRoot" class="logo-center">
+    <p>Uma faísca para um futuro sustentável</p>
+  </header>
+
+  <nav>
+    <a href="#empresa">Empresa</a>
+    <a href="#produto">Produto</a>
+    <a href="#funcionalidades">Funcionalidades</a>
+    <a href="#conceitos">Sustentabilidade</a>
+  </nav>
+
+  <section id="empresa" class="card">
+    <h2>Sobre a Empresa</h2>
+    <p>A <strong>EcoRoot</strong> é a empresa por trás do EcoFós, e tem como objetivo encontrar soluções sustentáveis para produtos simples do dia a dia. Buscamos não só aumentar a <strong>vida útil dos objetos</strong>, mas também contribuir para um planeta mais duradouro e consciente.</p>
+  </section>
+
+  <section id="produto" class="card">
+    <h2>Sobre o nosso produto</h2>
+    <img src="img/ecofor.png" alt="Imagem do EcoFós" class="produto-img">
+    <p>O <strong>EcoFós</strong> é uma caixa de fósforos especial, criada para durar mais e ser reaproveitada. Disponível em três tamanhos (20, 40 e 60 fósforos), é feita de <strong>cartão resistente à umidade</strong>, o que a torna mais durável do que caixas comuns.</p>
+  </section>
+
+  <section id="funcionalidades" class="card">
+    <h2>As suas funcionalidades</h2>
+    <p>Graças ao seu design reforçado, o EcoFós pode ser <strong>reutilizado de diversas formas</strong> após o uso dos fósforos. Pode funcionar como:</p>
+    <ul>
+      <li>Mini gaveta para objetos pequenos</li>
+      <li>Recipiente para sementes ou especiarias</li>
+      <li>Forma segura de enviar objetos pequenos para dentro de compartimentos fechados (como gaiolas)</li>
+    </ul>
+    <p>Essa multifuncionalidade torna o EcoFós uma escolha inteligente e ecológica.</p>
+  </section>
+
+  <section id="conceitos" class="card">
+    <h2>Mas, por quê?</h2>
+    <p>A <strong>EcoRoot</strong>, como já dito anteriormente, transforma produtos com destino ao descarte (modelo de <strong>economia linear</strong>) em produtos com novas funções, integrando-os a uma <strong>economia circular</strong>. Assim, promove-se a <strong>sustentabilidade</strong>, pois se reduz o desperdício e se aproveitam melhor os recursos naturais. Ao dar uma nova utilidade ao produto, estende-se sua <strong>vida útil</strong> e reduz-se o impacto ambiental.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 EcoRoot.
+  </footer>
+</body>
 </html>
